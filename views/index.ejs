@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="starter-template">
+        <% if (!user) { %>
+        <h3>Welcome!</h3>
+        <a class="btn btn-primary" href="/login">Login</a>
+        <% } else { %>
+            <h3>Welcome <%= user.name %>!</h3>
+            <ul class="nav nav-pills nav-stacked">
+            <% if (user.type == 'owner') { %>
+                <li><a href="/account">Account Info</a></li>
+                <li><a href="/grants">Access Grants</a></li>
+            <% } else { %>
+                <li><a href="/client">Client Configuration</a></li>
+                <li><a href="/debug">Debug</a></li>
+            <% } %>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        <% } %>
+    </div>
+</div>

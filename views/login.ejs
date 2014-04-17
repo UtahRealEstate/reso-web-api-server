@@ -1,0 +1,31 @@
+<div class="container">
+
+<h2>Log in</h2>
+<form action="/login" method="post" role="form">
+  <div class="form-group">
+    <label>Username:</label>
+    <input type="text" name="username" class="form-control" id="txtUsername" value=""/><br/>
+  </div>
+    <div class="form-group">
+    <label>Password:</label>
+    <input type="password" name="password" class="form-control"  id="pssPassword" value=""/>
+  </div>
+  <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+<p><small>Hint - <a href="#" class="autofill">bob:secret</a> - (resource owner)</small></p>
+<p><small>Hint - <a href="#" class="autofill">joe:password</a> - (resource owner)</small></p>
+<p><small>Hint - <a href="#" class="autofill">fred:money</a> - (api consumer)</small></p>
+</div>
+<script type="application/javascript">
+
+    $('.autofill').click(function(evt) {
+        var parts = evt.target.text.split(':');
+        $("#txtUsername").val(parts[0]);
+        $('#pssPassword').val(parts[1]);
+
+        return false;
+
+    });
+</script>

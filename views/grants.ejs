@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Access Grants</h2>
+    Place for resource owners to view and revoke access grants
+    <%
+        grants.forEach(function(el, index) { %>
+
+    <%= el.token  %>
+    <% }) %>
+</div>
