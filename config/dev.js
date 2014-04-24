@@ -4,7 +4,7 @@ module.exports = {
     tokenExpire     : 3600,
     authCodeExpire  : 600,
     hostname        : 'vv.fredish.com',
-    redirectURI     : 'http://vv.fredish.com:8080/auth/appexample/callback',
+    redirectURI     : 'http://reso.fredish.com:8080/auth/appexample/callback',
     sslKey          : './certs/sample.key',
     sslCert         : './certs/sample.crt'
-}
+};
