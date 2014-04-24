@@ -1,5 +1,5 @@
 var clients = [
-    { id: '1', name: 'SampleApp', clientId: 'abc123', clientSecret: 'ssh-secret', userId: '3', redirectURI: ['http://vv.fredish.com:8080/auth/appexample/callback'
+    { id: '1', name: 'SampleApp', clientId: 'abc123', clientSecret: 'ssh-secret', userId: '3', redirectURI: ['http://reso.fredish.com:8080/auth/appexample/callback'
                                                                                                             ,'http://reso.wfrmls.com:8080/auth/appexample/callback']}
 ];
 
