@@ -1,9 +1,37 @@
 <div class="container">
     <h2>Access Grants</h2>
-    Place for resource owners to view and revoke access grants
-    <%
-        grants.forEach(function(el, index) { %>
-
-    <%= el.token  %>
-    <% }) %>
+    Place for resource owners to view and revoke access grants<br/>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Application</th>
+            <th>Expires</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% grants.forEach(function(el, index) { %>
+        <tr id="ID<%= el.token  %>">
+            <td>SampleApp</td>
+            <td><%= el.expiration %></td>
+            <td><button onclick="revoke('<%= el.token  %>');">Revoke</button></td>
+        </tr>
+        <% }) %>
+        </tbody>
+    </table>
 </div>
+<script>
+    function revoke(token) {
+        if (window.confirm('Are you sure you want to revoke access for this application?')) {
+            $( "#ID" + token ).animate({
+                opacity: 0.25,
+                left: "+=50",
+                height: "toggle"
+            }, 500, function() {
+                //window.alert(token);
+                // Animation complete.
+            });
+
+        }
+    }
+</script>
